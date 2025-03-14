@@ -1,0 +1,571 @@
+@charset "utf-8";
+
+/* Fondo claro blanco / gris claro */
+/* Color principal azul oscuro morado verde para Hx y buttons */
+/* Color secundario gris, celeste para detalles */
+/* Color de acento naranja, amarillo para resaltar elementos clave */
+
+
+
+/* Ejemplo de paleta: Azul (#007BFF), gris oscuro (#333333), acento amarillo (#FFC107) */
+
+/* Tipografia */
+/* Titulos: Montserrat, Poppins, Inter */
+/* Cuerpo: Roboto, Open Sans, Lato */
+
+/* Diseño general */
+/* 📌 Minimalista: Espacios amplios, no recargar con demasiados elementos. */
+/* 📌 Botones llamativos: Bien contrastados y con bordes redondeados. */
+/* 📌 Animaciones sutiles: Efectos de hover en botones y transiciones suaves. */
+
+*,
+*::after, 
+*::before{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 18px;
+    --color-lightback: #fff;
+    --color-background: #e3e3e3;
+    --color-main: #007BFF; /* Color Titulos y Botones*/
+    --color-secundary: #333333; /* Color Detalles */
+    --color-key:#FFC107; /* Para resaltar elementos */
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Lato", serif;
+    font-size: 1rem;
+    /* font-family: "Poppins", serif; Titulares */
+    background-color: var(--color-secundary);
+    color: var(--color-secundary);
+}
+
+/* ETIQUETAS GENERALES ___________________________________________________________________________________ */
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: var(--color-key);
+}
+
+h1,h2,h3{
+    color: var(--color-main);
+    font-family: "Poppins", serif;
+}
+
+h2{
+    margin-bottom: 1rem ;
+}
+
+h3{
+    color: var(--color-key);
+}
+
+body>header{
+    background-color: var(--color-lightback);
+    box-shadow: 0px 5px 5px var(--color-secundary);
+    position: relative;
+}
+
+body>header, nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Posicion fija para mobile */
+nav>div{
+    position: fixed;
+    top: 5px;
+    right: 5px;
+
+    z-index: 1;
+
+}
+
+nav ul{
+    flex-direction: column;
+}
+
+header, nav ul li{
+    padding: .5rem;
+}
+
+nav ul{
+    list-style: none;
+}
+
+p{
+    margin: .5rem;
+}
+
+section{
+    padding: 1rem;
+    background-color: var(--color-lightback);
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+footer{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    color: var(--color-secundary);
+    gap: 1rem;
+}
+
+/* Formulario */
+
+form{
+    width: 100%;
+    margin: auto;
+}
+
+fieldset{
+    padding: 1rem;
+    background-color: var(--color-secundary);
+    color: var(--color-key);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+legend{
+    background-color: var(--color-secundary);
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+fieldset ul li{
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset ul li{
+    list-style: none;
+}
+
+fieldset>ul>li:last-of-type{
+    align-items: center;
+}
+
+fieldset input, fieldset textarea, #botonEnvia{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    resize: none;
+    padding: .5rem;
+    width: 100%;
+}
+
+fieldset input:focus, fieldset textarea:focus{
+    background-color: var(--color-key);
+    color: var(--color-secundary);
+    font-weight: bold;
+}
+
+fieldset textarea{
+    height: 200px;
+}
+
+#botonnvia{
+    width: 50%;
+}
+
+#botonEnvia:hover{
+    background-color: var(--color-key);
+    color: var(--color-secundary);
+    border-color: var(--color-secundary);
+    font-weight: bold;
+
+}
+
+/* #Identificadores ####################################################### */
+
+#home{
+    background-color: var(--color-secundary);
+    color: var(--color-key);
+    /* height: 88vh; */
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home>h2{
+    color: var(--color-key);
+}
+
+/* BOLA DE ICONOS LOGOS */
+#home>figure>div{
+
+width: 160px;
+height: 160px;
+
+position: absolute;
+bottom: 13%;
+left: 26%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#home>figure>div>figure{
+    width: 70%;
+    height: 70%;
+
+    opacity: .75;
+}
+
+#home>figure>div>figure>img{
+    width: 100%;
+}
+
+
+#home>figure{
+    width: 100%;
+
+    position: relative;
+}
+
+#home>figure>img{
+    width: 100%;
+}
+
+#home>figure>figcaption{
+    position: absolute;
+    padding: 1rem;
+
+    bottom: 0px;
+    background-color: var(--color-background);
+    color: var(--color-main);
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#sobre-mi, #experiencia, #formacion{
+    width: 100%;
+}
+
+#proyectos, #contacto{
+    width: 100%;
+}
+
+
+/* redes sociales */
+#rrss{
+    display: flex;
+    gap: 1rem;
+    background-color: var(--color-background);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--color-main);
+}
+
+#rrss a{
+    width: 50px;
+    height: 50px;
+}
+
+#github{
+    background-image: url(../img/GitHub-logo-black.png);
+    background-size: cover;
+}
+#github:hover{
+    transition: all 0.5s ease;
+    background-image: url(../img/GitHub-logo-white.png);
+    background-color: var(--color-secundary);
+    border-radius: 50%;
+
+}
+
+#codepen{
+    background-image: url(https://blog.codepen.io/wp-content/uploads/2023/09/logo-black.png);
+    background-size: cover;
+}
+
+#codepen:hover{
+    transition: all 0.5s ease;
+    background-image: url(https://blog.codepen.io/wp-content/uploads/2023/09/logo-white.png);
+    background-color: var(--color-secundary);
+    border-radius: 50%;
+    border: 5px solid var(--color-secundary);
+
+}
+
+#linkedin{
+    background-image: url(../img/InBug-Black.png);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#linkedin:hover{
+    transition: all 0.5s ease;
+    background-image: url(../img/InBug-White.png);
+    background-color: var(--color-secundary);
+    border-radius: 50%;
+    border: 5px solid var(--color-secundary);
+}
+
+#github:hover, #codepen:hover, #linkedin:hover{
+    animation-name: roller;
+    animation-duration: 1s;
+    
+}
+
+/* ---------- */
+
+/* CLASES ......................................................... */
+.aparicion{
+    animation: genera 2s ease-in-out;
+}
+
+@keyframes genera{
+0%{opacity: 0;}
+50%{opacity: 0.5;}
+100%{opacity: 1;}
+}
+.error{
+    background-color: rgb(255, 203, 203);
+}
+
+.noError{
+    background-color: none;
+}
+
+.laptop{
+    display: none;
+}
+
+/* Navegador */
+.material-symbols-outlined{
+    padding: 1rem;
+    background-color: var(--color-background);
+    border-radius: 50%;
+    border: 2px solid var(--color-main);
+
+}
+
+.mobile{
+    position: fixed;
+    right: -100px;
+    top: 75px;
+    text-align: right;
+    background-color: var(--color-secundary);
+    color: var(--color-key);
+    border-radius: 5px;
+
+}
+
+.show{
+    transform: translateX(-110px);
+    transition:all 1s ease;
+}
+
+.deshow{
+    transform: translateX(110px);
+    transition:all 1s ease;
+}
+
+.mobile li{
+    border-bottom: 1px solid var(--color-main);
+
+}
+
+.activoTemp{
+    animation: blackie .5s alternate;
+}
+
+/* No se puede mover esta clase por encima de .mobile o .mobile sobreescribe ciertos atributos */
+#botonEnvia, .activo{
+    /* transition-delay: .5s; */
+    background-color: var(--color-secundary);
+    color: var(--color-key);
+    border-color: var(--color-key);
+
+}
+
+@keyframes roller {
+    0%   {
+        transform: rotate(0turn);
+    }
+    25%  {
+        transform: rotate(-0.25turn);
+    }
+    100% {
+        transform: rotate(2turn);
+    }
+  }
+
+  @keyframes blackie {
+    from{
+        background-color: var(--color-background);
+        transform: scale(0);
+        color: var(--color-secundary);
+        border-color: var(--color-main);
+    }
+    to{
+        background-color: var(--color-secundary);
+        transform: scale(1);
+        color: var(--color-key);
+        border-color: var(--color-key);
+    }
+  }
+
+  /* MEDIA QUERIES ================================================================================================= */
+  @media only screen and (min-width: 768px) {
+
+#home>figure>div{
+width: 325px;
+height: 325px;
+}
+
+footer{
+    grid-template-columns: auto 1fr;
+}
+
+footer>section{
+    width: 100%;
+}
+  
+}
+  @media only screen and (min-width: 1024px) {
+
+    form{
+        width: 75%;
+    }
+
+    main{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    nav{
+        padding-top: .5rem;
+    }
+
+    nav>div{
+        display: none;
+    }
+
+    #home{
+        width: 100%;
+    }
+
+    #home>figure{
+        width: 75%;
+    }
+
+    #home>figure>div{
+        width: 325px;
+        height: 325px;
+        
+        }
+
+    #experiencia, #formacion{
+        width: 48%;
+    }
+
+    .laptop{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .laptop>li:last-of-type{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .laptop>li:last-of-type span{
+        background-color: var(--color-main);
+        color: var(--color-background);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+:root{
+    font-size: 20px;
+}
+
+    #home>figure{
+        width: 50%;
+    }
+
+    #home>figure>div{
+        width: 300px;
+        height: 300px;
+        
+        }
+
+    #experiencia, #formacion{
+        width: 49%;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    #home>figure>div{
+        width: 400px;
+        height: 400px;
+        }
+
+} 
+
+@media only screen and (min-width: 2560px) {
+    
+    :root{
+        font-size: 25px;
+    }
+
+    #home>figure{
+        width: 50%;
+    }
+
+    #home>figure>div{
+        left: 27%;
+        
+        width: 550px;
+        height: 550px;
+        
+    }
+
+    #experiencia, #formacion{
+        width: 49.5%;
+    }
+
+    #rrss a{
+        width: 100px;
+        height: 100px;
+    }
+}
+
