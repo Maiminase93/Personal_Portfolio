@@ -1,14 +1,10 @@
 window.addEventListener('load', ()=>{
 
-    // document.querySelector('#finestraModal').style.display = 'none';
+    document.querySelector('#finestraModal').style.display = 'none';
 
-
-
-    // Proyecto enlace ventana modal
-    // document.querySelector('#enlaceModal').addEventListener('click', ventanaModal);
 
     // X cierre modal
-    // document.querySelector('#cierre').addEventListener('click', cierreModal);
+    document.querySelector('#cierre').addEventListener('click', cierreModal);
 
 
     // Boton de envio
@@ -148,3 +144,35 @@ function enviarFormulario(){
     }
 }
 // Llamada por window EVENT
+
+
+// Finestra Modal llamada
+let proyectos = document.querySelectorAll('#proyectos>section>figure>img');
+
+proyectos.forEach((imagen) =>{
+    imagen.addEventListener('click', ()=>{
+            // Declaracion de variables
+    
+            let ventana = document.querySelector('#finestraModal');
+            ventana.style.display = 'flex';
+    
+            let direccion = imagen.getAttribute('src');
+            let github = imagen.getAttribute('alt');
+
+            let mostrar = document.querySelector('#muestra');
+            let enlazar = document.getElementById('enlace');
+
+            enlazar.innerHTML = `<a href="${github}" target="_blank">Navega esta web en GitHub Pages</a>`;
+            mostrar.setAttribute('src', direccion);
+        
+    })
+})
+    
+    // Cierre ventana Modal
+    
+    function cierreModal(){
+    
+        let contrato = document.querySelector('#finestraModal');
+        contrato.style.display = 'none';
+    
+    }
