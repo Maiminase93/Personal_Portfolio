@@ -283,10 +283,22 @@ align-items: center;
     padding: .5rem;
     color: var(--color-background);
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 #proyectos>section>figure>img{
     width: 100%;
+    cursor: pointer;
+}
+
+#proyectos>section>figure:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    border-radius: 10px;
 }
 
 /* redes sociales */
@@ -297,11 +309,17 @@ align-items: center;
     padding: 1rem;
     border-radius: 10px;
     border: 2px solid var(--color-main);
+    align-items: center;
 }
 
 #rrss a{
     width: 50px;
     height: 50px;
+}
+
+#rrss:hover{
+    border: 2px solid var(--color-key);
+    background-color: var(--color-lightback);
 }
 
 #github{
