@@ -129,6 +129,20 @@ function validacion(campo, campoValue, expresion){
     }
 }
 
+// Validacion del checkbox politica de privacidad
+
+function validaPolitica(){
+    let politicaPrivacidad = document.querySelector('#condiciones');
+
+    if(!politicaPrivacidad.checked){
+        alert('- Debe aceptar nuestra politica de privacidad');
+        return false;
+
+    }else{
+        return true;
+    }
+}
+
 // Funcion validadora
 function enviarFormulario(){
     let valido = 0;
@@ -136,8 +150,9 @@ function enviarFormulario(){
     if(validacion(nom, nom.value, expresion1)) valido++;
     if(validacion(correu, correu.value, expresion2)) valido++;
     if(validacion(comunicado, comunicado.value, expresion3)) valido++;
+    if(validaPolitica()) valido++;
 
-    if(valido === 3){
+    if(valido === 4){
         alert('Formulario enviado con éxito, gracias!');
         let formulario = document.querySelector('#formulario');
         formulario.submit();

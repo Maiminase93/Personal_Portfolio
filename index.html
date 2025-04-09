@@ -27,6 +27,8 @@
                     menu
                     </span>
                 <ul class="mobile">
+                    <li><a href="../plantworld/index.php" target="_blank">🌱PlantWorld</a></li>
+
                     <li><a href="#sobre-mi" target="_self">Sobre mí</a></li>
                     <li><a href="#proyectos" target="_self">Proyectos</a></li>
                     <li><a href="#contacto" target="_self">Contacto</a></li>
@@ -34,6 +36,8 @@
             </div>
 
             <ul class="laptop">
+                <li><a href="../plantworld/index.php" target="_blank">🌱PlantWorld</a></li>
+
                 <li><a href="#sobre-mi" target="_self">Sobre mí</a></li>
                 <li><a href="#proyectos" target="_self">Proyectos</a></li>
                 <li><a href="#contacto" target="_self">Contacto</a></li>
@@ -49,6 +53,15 @@
             </ul>
         </nav>
         
+        <section id="finestraModal2">
+            <span id="cierre2">X</span>
+            <h2>Protecció de dades personals</h2>
+            
+            <p>D'acord amb el que estableix la Llei orgànica 15/1999, de 13 de desembre, de protecció de dades de caràcter personal, les dades personal que faciliteu en el formulari de contacte del web seran objecte de tractament i s'inclouran en el fitxer informatitzat "Fitxer de contacte d'usuaris", del qual aquesta empresa n'és la responsable, declarat i inscrit al Registre de Protecció de Dades de Catalunya, de l'Agència Catalana de Protecció de Dades, en compliment de la Llei orgànica 15/1999, de 13 desembre, de protecció de dades de caràcter personal i de la Llei 5/2002, de 19 d'abril, de l'Agència Catalana de Protecció de Dades.</p>
+
+            <p>Les dades personal subministrades per mitjà del formulari s'utilitzaran amb l'exclusiva finalitat de mantenir la relació administrativa per gestionar la sol·licitud d'informació, envia informació per correu postal i electrònic sobre serveis o activitats de la nostra empresa.</p>
+        </section>
+
     </header>
     
     <main>
@@ -116,6 +129,12 @@
 
             <section>
                 <h3 style="display: none;">Galeria</h3>
+
+                <figure>
+                    <img src="img/plantworldweb.PNG" alt="https://maiminase93.github.io/personalclicker">
+                    <figcaption>Proyecto enfocado con Javascript</figcaption>
+                </figure>
+
                 <figure>
                     <img src="img/editolineweb.png" alt="https://maiminase93.github.io/Editoline/">
                     <figcaption>Uso de HTML y CSS</figcaption>
@@ -144,7 +163,7 @@
             
             <p>Aquí puedes ponerte en contacto para posibles trabajos.</p>
 
-            <form action="#contacto" method="post" id="formulario">
+            <form action="recepcion.php" method="post" id="formulario">
                 <fieldset>
                     <legend>Contacto</legend>
 
@@ -163,6 +182,13 @@
                             <label for="comunicado">Comunicado: </label>
                             <textarea name="comunicado" id="comunicado" placeholder="Escribe aquí tu propuesta &#128512;"></textarea>
                         </li>
+
+                        <!-- Entrada de tipo seleccion multiple -->
+                        <li>
+                            <input type="checkbox" name="condiciones" id="condiciones" value="Acepta" required>
+                            <label for="condiciones">Acepta las condiciones de nuestra <a href="#finestraModal2" id="enlaceModal2">política de privacidad</a></label>
+                        </li>
+
                         <li>
                             <input type="button" value="Enviar"
                             id="botonEnvia">
@@ -204,5 +230,6 @@
     </footer>
     <!-- Mis scripts -->
      <script src="js/script.js"></script>
+     <script src="js/politicas.js"></script>
 </body>
 </html>

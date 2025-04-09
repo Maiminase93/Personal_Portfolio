@@ -153,13 +153,21 @@ legend{
     border-radius: 5px;
 }
 
-fieldset ul li{
+fieldset>ul li{
     display: flex;
     flex-direction: column;
+    list-style: none;
 }
 
-fieldset ul li{
-    list-style: none;
+fieldset>ul>li:nth-last-of-type(2){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+fieldset>ul>li:nth-last-of-type(2)>input{
+    width: 2rem;
+    height: 1rem;
 }
 
 fieldset>ul>li:last-of-type{
@@ -320,6 +328,26 @@ align-items: center;
 
 }
 
+#finestraModal2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secundary);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 5px inset var(--color-main);
+    color: var(--color-key);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
 #finestraModal>figure{
     width: 100%;
     height: 100%;
@@ -341,6 +369,21 @@ align-items: center;
 }
 
 #cierre{
+    position: absolute;
+    right: 40px;
+    top: 30px;
+
+    font-size: 1.5rem;
+    line-height: 1rem;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 5px solid var(--color-key);
+    color: var(--color-key);
+    background-color: var(--color-secundary);
+
+}
+
+#cierre2{
     position: absolute;
     right: 40px;
     top: 30px;
